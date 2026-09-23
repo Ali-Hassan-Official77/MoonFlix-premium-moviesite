@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Premium dark glass -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080B12"/>
+      <stop offset="0.55" stop-color="#05070C"/>
+      <stop offset="1" stop-color="#0D0915"/>
+    </linearGradient>
+
+    <!-- Gold -->
+    <linearGradient id="gold" x1="0.15" y1="0.05" x2="0.85" y2="0.95">
+      <stop offset="0" stop-color="#FFF3B0"/>
+      <stop offset="0.22" stop-color="#FFD86A"/>
+      <stop offset="0.55" stop-color="#F4B52E"/>
+      <stop offset="0.82" stop-color="#D88A13"/>
+      <stop offset="1" stop-color="#FFF0A0"/>
+    </linearGradient>
+
+    <!-- Violet -->
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B996FF"/>
+      <stop offset="0.5" stop-color="#7044FF"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Star -->
+    <linearGradient id="star" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.45" stop-color="#E9E7FF"/>
+      <stop offset="1" stop-color="#9E8CFF"/>
+    </linearGradient>
+
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8D6BFF"/>
+      <stop offset="0.42" stop-color="#302E48"/>
+      <stop offset="0.72" stop-color="#5B536C"/>
+      <stop offset="1" stop-color="#FFC94D"/>
+    </linearGradient>
+
+    <radialGradient id="goldGlow">
+      <stop offset="0" stop-color="#FFD35A" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FFD35A" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleGlow">
+      <stop offset="0" stop-color="#7C4DFF" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#7C4DFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".65"/>
+    </filter>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="cardClip">
+      <rect x="24" y="24" width="464" height="464" rx="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Floating premium app tile -->
+  <rect x="24" y="24" width="464" height="464" rx="96"
+        fill="url(#bg)" stroke="#191C25" stroke-width="10" filter="url(#shadow)"/>
+
+  <!-- Subtle inner glass highlight -->
+  <rect x="30" y="30" width="452" height="452" rx="90"
+        fill="none" stroke="url(#rim)" stroke-width="3" opacity=".9"/>
+
+  <!-- Ambient glows -->
+  <circle cx="126" cy="366" r="150" fill="url(#purpleGlow)"/>
+  <circle cx="382" cy="130" r="145" fill="url(#goldGlow)"/>
+
+  <!-- Orbital accents -->
+  <g fill="none" stroke-linecap="round" opacity=".55">
+    <ellipse cx="255" cy="278" rx="185" ry="112"
+             transform="rotate(-18 255 278)"
+             stroke="url(#violet)" stroke-width="2"/>
+    <ellipse cx="255" cy="278" rx="205" ry="126"
+             transform="rotate(18 255 278)"
+             stroke="url(#gold)" stroke-width="1.5" opacity=".45"/>
+  </g>
+
+  <!-- Crescent glow -->
+  <path d="M332 96
+           C245 111 182 184 182 268
+           C182 365 260 420 347 405
+           C300 395 265 350 265 278
+           C265 203 289 143 332 96Z"
+        fill="none" stroke="#FFC83D" stroke-width="18" opacity=".18"
+        filter="url(#softGlow)"/>
+
+  <!-- Crescent -->
+  <path d="M332 96
+           C245 111 182 184 182 268
+           C182 365 260 420 347 405
+           C300 395 265 350 265 278
+           C265 203 289 143 332 96Z"
+        fill="url(#gold)" stroke="#FFE38A" stroke-width="2"/>
+
+  <!-- Crescent specular edge -->
+  <path d="M327 104
+           C252 124 197 188 197 267
+           C197 337 244 388 306 402"
+        fill="none" stroke="#FFF4C4" stroke-width="5"
+        stroke-linecap="round" opacity=".72"/>
+
+  <!-- Small gold planet -->
+  <circle cx="142" cy="137" r="16" fill="#FFE18A" opacity=".22" filter="url(#smallGlow)"/>
+  <circle cx="142" cy="137" r="10.5" fill="url(#gold)" stroke="#FFF0B2" stroke-width="1"/>
+
+  <!-- Small violet planet -->
+  <circle cx="139" cy="369" r="18" fill="#8D5CFF" opacity=".22" filter="url(#smallGlow)"/>
+  <circle cx="139" cy="369" r="10.5" fill="url(#violet)" stroke="#C7B6FF" stroke-width="1"/>
+
+  <!-- Four-point premium star -->
+  <path d="M377 109
+           L389 143
+           L423 155
+           L389 167
+           L377 201
+           L365 167
+           L331 155
+           L365 143Z"
+        fill="#B8A8FF" opacity=".35" filter="url(#softGlow)"/>
+
+  <path d="M377 109
+           L389 143
+           L423 155
+           L389 167
+           L377 201
+           L365 167
+           L331 155
+           L365 143Z"
+        fill="url(#star)"/>
+
+  <!-- Star core -->
+  <path d="M377 139 L382 150 L393 155 L382 160 L377 171 L372 160 L361 155 L372 150Z"
+        fill="#FFFFFF"/>
+
+  <!-- Tiny highlights -->
+  <circle cx="409" cy="116" r="2.2" fill="#FFF3C7"/>
+  <circle cx="105" cy="187" r="1.6" fill="#BDA8FF"/>
+  <circle cx="425" cy="286" r="1.8" fill="#FFD96A"/>
+
+  <!-- Bottom glass sheen -->
+  <path d="M90 443 C188 476 327 478 422 434"
+        fill="none" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="2"
+        stroke-linecap="round"/>
+
+  <!-- Outer highlight segments -->
+  <path d="M93 46 C65 65 47 91 40 125"
+        fill="none" stroke="#9D83FF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <path d="M387 46 C437 64 465 96 474 137"
+        fill="none" stroke="#FFD45F" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+</svg>
