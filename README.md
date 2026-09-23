@@ -1,4 +1,4 @@
-# GoGoHD
+# MoonFlix
 
 A dark, cinematic film discovery site built with Next.js 14 (App Router), Tailwind CSS, and Framer Motion, powered by the TMDB API.
 
