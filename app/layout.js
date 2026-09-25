@@ -21,6 +21,8 @@ export default function RootLayout({ children }) {
           <main className="min-h-screen">{children}</main>
           <Footer />
         </Providers>
+
+    <script src="https://cdn.zanderio.ai/widget/loader.js" data-id="wdg_9W1FXO1oVPhDaVkFEMFd7QEN" defer></script>
       </body>
     </html>
   );
